@@ -5,9 +5,9 @@ import play.api._
 import play.api.mvc._
 
 @Singleton
-class HomeController @Inject() extends Controller {
+class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
-  def index = Action {
+  def index: Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
     Ok(views.html.home("Your new application is ready."))
   }
 

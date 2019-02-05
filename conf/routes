@@ -5,5 +5,8 @@
 GET     /                           controllers.HomeController.index
 GET     /count                      controllers.CountController.count
 GET     /message                    controllers.AsyncController.message
+GET     /users                      controllers.UsersController.index
+
+->      /api/v1/users               api.v1.users.UsersRouter
 
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

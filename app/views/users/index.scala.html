@@ -1,0 +1,20 @@
+@(users: Array[Int])
+
+@main("Khobar App") {
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(user <- users) {
+          <tr>
+            <td>@user</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+}
